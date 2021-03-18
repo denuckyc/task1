@@ -1,0 +1,2 @@
+class BandwidthsController < ApplicationController
+end
