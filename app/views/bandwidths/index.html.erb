@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bandwidths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Value</th>
+      <th>Interface name</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bandwidths.each do |bandwidth| %>
+      <tr>
+        <td><%= bandwidth.server_id %></td>
+        <td><%= bandwidth.value %></td>
+        <td><%= bandwidth.interface_name %></td>
+        <td><%= bandwidth.value_id %></td>
+        <td><%= link_to 'Show', bandwidth %></td>
+        <td><%= link_to 'Destroy', bandwidth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

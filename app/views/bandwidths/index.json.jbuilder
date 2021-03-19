@@ -1,1 +1,1 @@
-json.array! @bandwidths, partial: "bandwidths/bandwidth", as: :bandwidth
+json.array! @bandwidths, partial: 'bandwidths/bandwidth', as: :bandwidth

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Server name:</strong>
+  <%= @server.name %>
+</p>
+<h3>Bandwidths:</h3>
+
+<table border=2px>
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Value</th>
+      <th>Interface name</th>
+      <th>value_id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bandwidths.each do |bandwidth| %>
+      <tr>
+        <td><%= bandwidth.server_id %></td>
+        <td><%= bandwidth.value %> Mbps</td>
+        <td><%= bandwidth.interface_name %></td>
+        <td><%= bandwidth.value_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Back', servers_path %>

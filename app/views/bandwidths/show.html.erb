@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @bandwidth.server_id %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @bandwidth.value %>
+</p>
+
+<p>
+  <strong>Interface name:</strong>
+  <%= @bandwidth.interface_name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @bandwidth.value_id %>
+</p>
+
+<%= link_to 'Edit', edit_bandwidth_path(@bandwidth) %> |
+<%= link_to 'Back', bandwidths_path %>
