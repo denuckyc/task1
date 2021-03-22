@@ -32,6 +32,6 @@ class BandwidthsController < ApplicationController
   end
 
   def find_server
-    @server = Server.find(params[:id])
+    @server = Server.find(params[:server_id])
   end
 end

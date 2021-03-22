@@ -18,7 +18,7 @@ class ServersController < ApplicationController
     @server.destroy
     @bandwidths.destroy
     respond_to do |format|
-      format.html { redirect_to servers_url, notice: 'Server was successfully destroyed.' }
+      format.html { redirect_to servers_url, notice: 'Server was successfully destroyed along with it interfaces.' }
       format.json { head :no_content }
     end
     # render json: @server, status: 204
