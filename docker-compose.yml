@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:12.6
+    environment:
+      POSTGRES_USERNAME: qq
+      POSTGRES_PASSWORD: QWERTY123
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+
+  web:
+    build: .
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    env_file:
+      - .env
+

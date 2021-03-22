@@ -1,1 +1,1 @@
-json.partial! "bandwidths/bandwidth", bandwidth: @bandwidth
+json.partial! 'bandwidths/bandwidth', bandwidth: @bandwidth

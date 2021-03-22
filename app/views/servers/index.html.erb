@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Servers</h1>
+
+<table border=5px width="20%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody align="center">
+    <% @servers.each do |server| %>
+      <tr>
+        <td><%= link_to server.name, server %></td>
+        <td><%= link_to 'Destroy server', server, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
